@@ -222,7 +222,6 @@ GUChord::hashIP(Ipv4Address ip)
   SHA1(ch, sizeof(uint16_t), (unsigned char*)&digest);
 
   uint64_t truncatedHash = 0;
-  //7 chars is 56 bytes
   for(int i = 0; i < SHA_DIGEST_LENGTH; i++) {
       truncatedHash = (truncatedHash << 8) + int(digest[i]);
   }
